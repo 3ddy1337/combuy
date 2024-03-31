@@ -1,0 +1,291 @@
+/*************************************/
+
+/* General Styling */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Monofett";
+  font-weight: 600;
+  font-size: 16px;
+  src: url("./fonts/Monofett/Monofett-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Monoton";
+  font-weight: 600;
+  font-size: 16px;
+  src: url("./fonts/Monoton/Monoton-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nico Moji";
+  font-weight: 600;
+  font-size: 16px;
+  src: url("./fonts/nicomoji/NicoMoji-Regular.ttf") format("truetype");
+}
+
+html {
+  font-family: "Nico Moji", monospace;
+  font-weight: 900;
+
+  background: rgb(148, 221, 244);
+  background: linear-gradient(
+    90deg,
+    rgba(148, 221, 244, 1) 0%,
+    rgba(222, 235, 239, 1) 100%
+  );
+
+  margin: 0 auto;
+  min-width: 375px;
+  text-align: center;
+}
+
+.header-wrapper {
+  margin: 0 0.75rem 0 0.75rem;
+}
+
+header {
+  margin: 0.75rem auto 1rem auto;
+  padding: 0.5rem;
+  box-shadow: 10px 50px 50px 10px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 3rem 3rem;
+  max-width: 450px;
+}
+
+header:hover {
+  _box-shadow: 0px 0px 50px 0px black;
+}
+
+h1 {
+  font-family: "Monoton";
+  font-size: 3rem;
+  margin: 0rem;
+}
+
+.header-text {
+  font-family: "Monofett";
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+nav {
+  margin: 2rem;
+}
+
+.nav-button {
+  padding: 0.5rem;
+  background-color: rgb(222, 235, 239);
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.nav-button:after,
+.nav-button::before,
+.nav-button:visited {
+  color: black;
+}
+
+.nav-button:hover {
+  background-color: rgb(148, 221, 244);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem 1rem 0 0;
+
+  aspect-ratio: 1 / 1;
+}
+
+.card-offer {
+  box-shadow: 10px 50px 50px 10px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 1rem 1rem;
+
+  padding: 1rem 1rem 0rem 1rem;
+
+  text-align: center;
+  justify-self: center;
+
+  max-width: 450px;
+  position: relative;
+}
+
+.card-offer:hover {
+  box-shadow: 0px 0px 10px 0px black;
+}
+
+.star-icon {
+  top: 25px;
+  left: 25px;
+  position: absolute;
+  fill: grey;
+  padding: 0.5rem;
+  width: 15%;
+  height: auto;
+  z-index: 1;
+}
+
+.star-icon:hover {
+  fill: rgb(148, 221, 244);
+}
+
+.box-star {
+  top: 28px;
+  left: 28px;
+  position: absolute;
+  background-color: white;
+  padding: 22px;
+  border-radius: 0.75rem;
+}
+
+.box-info {
+  top: 28px;
+  right: 28px;
+  position: absolute;
+  background-color: white;
+  padding: 9px 15px 9px 15px;
+  border-radius: 0.75rem;
+}
+
+.box-info > p {
+  font-size: 1.5rem;
+  color: gray;
+  margin: 0;
+}
+
+.box-info > p:hover {
+  color: rgb(148, 221, 244);
+}
+
+.inner-wrapper {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem 1rem;
+  _background-color: rgb(222, 235, 239);
+}
+
+.tier-wrapper {
+  _box-shadow: 10px 50px 50px 10px rgba(38, 36, 36, 0.3);
+  _background-color: rgb(222, 235, 239);
+  border-radius: 0 0 1rem 1rem;
+
+  padding: 0rem;
+  margin: 0;
+}
+
+.product {
+  font-size: 1rem;
+  margin: 0;
+  padding-bottom: 0.4rem;
+  text-shadow: 1px 1px 2px rgb(77, 14, 14);
+}
+
+.tiers {
+  margin: 0;
+  padding-bottom: 0.4rem;
+}
+
+.buy-button {
+  font-family: Monofett;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+  color: rgb(15, 63, 15);
+  position: relative;
+  right: 90px;
+  bottom: 5px;
+}
+
+.card-offer > .buy-button:hover {
+  color: rgb(28, 119, 28);
+}
+
+.timer {
+  font-family: Monofett;
+  font-size: 1.75rem;
+  color: rgb(77, 14, 14);
+  position: absolute;
+  bottom: -15px;
+  right: 22px;
+}
+
+/*
+
+* {
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+}
+
+html {
+  margin: 0 auto;
+  max-width: 80ch;
+  max-height: 100vh;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 20% 2fr auto;
+  gap: 10px 10px;
+  border: solid red;
+
+  background-color: rgb(221, 244, 248);
+}
+
+main {
+  margin: 0 auto 5rem auto;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  background-color: rgb(177, 203, 211);
+  padding: 2rem;
+}
+
+main {
+  margin: 0 auto;
+  grid-column: span 3;
+}
+
+img {
+  min-width: auto;
+  height: 30%;
+  border-radius: 1rem;
+}
+
+a {
+  padding: 1rem 1rem;
+}
+
+footer {
+  grid-column: span 3;
+  background-color: rgb(177, 203, 211);
+}
+
+main {
+  display: flex;
+}
+
+.navigation {
+}
+
+*/
