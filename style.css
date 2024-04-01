@@ -42,6 +42,7 @@ html {
 
   margin: 0 auto;
   min-width: 375px;
+  _height: 100vh;
   text-align: center;
 }
 
@@ -50,12 +51,12 @@ html {
 }
 
 header {
-  margin: 0.75rem auto 1rem auto;
+  margin: 0.75rem auto 0.75rem auto;
   padding: 0.5rem;
   box-shadow: 10px 50px 50px 10px rgba(0, 0, 0, 0.3);
   background-color: white;
-  border-radius: 3rem 3rem;
-  max-width: 450px;
+  border-radius: 2rem 2rem;
+  max-width: 90vw;
 }
 
 header:hover {
@@ -76,7 +77,9 @@ h1 {
 }
 
 nav {
-  margin: 2rem;
+  margin: 1rem auto 1rem auto;
+  max-width: 725px;
+  text-align: left;
 }
 
 .nav-button {
@@ -98,11 +101,15 @@ nav {
 
 main {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-content: center;
 }
 
-img {
+.grid-wrapper {
+  margin: 0 5vw 0 5vw;
+}
+
+.card-picture {
   max-width: 100%;
   height: auto;
   border-radius: 1rem 1rem 0 0;
@@ -111,21 +118,22 @@ img {
 }
 
 .card-offer {
-  box-shadow: 10px 50px 50px 10px rgba(0, 0, 0, 0.3);
+  _box-shadow: 10px 50px 50px 10px rgba(0, 0, 0, 0.3);
   background-color: white;
   border-radius: 1rem 1rem;
 
   padding: 1rem 1rem 0rem 1rem;
+  margin-bottom: 1rem;
 
   text-align: center;
   justify-self: center;
 
-  max-width: 450px;
+  width: 330px;
   position: relative;
 }
 
 .card-offer:hover {
-  box-shadow: 0px 0px 10px 0px black;
+  _box-shadow: 0px 0px 10px 0px black;
 }
 
 .star-icon {
@@ -150,6 +158,7 @@ img {
   background-color: white;
   padding: 22px;
   border-radius: 0.75rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .box-info {
@@ -159,6 +168,7 @@ img {
   background-color: white;
   padding: 9px 15px 9px 15px;
   border-radius: 0.75rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .box-info > p {
@@ -222,70 +232,156 @@ img {
   right: 22px;
 }
 
-/*
-
-* {
-  box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 900;
+.container {
+  _display: flex;
+  _gap: 20px;
+  width: 350px;
+  height: 600px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  _box-shadow: 0 3px 10px 0 rgba(#000, 0.1);
+  _-webkit-overflow-scrolling: touch;
+  _1scroll-padding: 1rem;
+  _padding: 1rem;
+  margin: auto;
+  border-radius: 1rem 1rem;
 }
 
-html {
-  margin: 0 auto;
-  max-width: 80ch;
-  max-height: 100vh;
+_.container::-webkit-scrollbar {
+  display: none;
 }
 
-body {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 20% 2fr auto;
-  gap: 10px 10px;
-  border: solid red;
-
-  background-color: rgb(221, 244, 248);
+.outer-wrapper {
+  _display: flex;
+  _justify-content: center;
+  _align-items: center;
+  _flex: 0 0 300px;
+  width: 330px;
+  height: 450px;
+  scroll-snap-align: start;
+  _background-color: #ccc;
+  margin-bottom: 3rem;
+  border-radius: 1rem 1rem;
 }
 
-main {
-  margin: 0 auto 5rem auto;
+.container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #fffdfd;
 }
 
-h1 {
-  font-size: 3rem;
-  margin: 0;
+.container::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
 }
 
-header {
-  text-align: center;
-  background-color: rgb(177, 203, 211);
-  padding: 2rem;
+.container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(222, 235, 239);
 }
 
-main {
-  margin: 0 auto;
-  grid-column: span 3;
-}
+/**************************************************/
+/* Small Cards */
 
-img {
-  min-width: auto;
-  height: 30%;
+.inner-wrapper-offers {
+  display: flex;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
 }
 
-a {
-  padding: 1rem 1rem;
+.card-picture-offers {
+  padding-right: 0.35rem;
+  border-radius: 1rem 0 0 1rem;
 }
 
-footer {
-  grid-column: span 3;
-  background-color: rgb(177, 203, 211);
+.star-icon-offers {
+  top: 120px;
+  left: 212px;
+  position: absolute;
+  fill: grey;
+  padding: 0.5rem;
+  width: 15%;
+  height: auto;
+  z-index: 1;
 }
 
-main {
-  display: flex;
+.star-icon-offers:hover {
+  fill: rgb(148, 221, 244);
 }
 
-.navigation {
+.box-star-offers {
+  top: 123px;
+  left: 215px;
+  position: absolute;
+  background-color: white;
+  padding: 22px;
+  border-radius: 0.75rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
-*/
+.box-info-offers {
+  top: 123px;
+  right: 15px;
+  position: absolute;
+  background-color: white;
+  padding: 9px 15px 9px 15px;
+  border-radius: 0.75rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.box-info-offers > p {
+  font-size: 1.5rem;
+  color: gray;
+  margin: 0;
+}
+
+.box-info-offers > p:hover {
+  color: rgb(148, 221, 244);
+}
+
+.buy-button-offers {
+  font-family: Monofett;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0.2rem;
+  color: rgb(15, 63, 15);
+  position: relative;
+  right: 90px;
+  bottom: 12px;
+}
+
+.card-offer > .buy-button-offers:hover {
+  color: rgb(28, 119, 28);
+}
+
+.timer-offers {
+  font-family: Monofett;
+  font-size: 1.2rem;
+  color: rgb(77, 14, 14);
+  position: absolute;
+  bottom: -17px;
+  left: 22px;
+}
+
+.product-offers {
+  font-size: 1rem;
+  margin: 0;
+  padding-bottom: 0.4rem;
+  padding-top: 0.4rem;
+  text-shadow: 1px 1px 2px rgb(77, 14, 14);
+}
+
+.outer-wrapper-offers {
+  _display: flex;
+  _justify-content: center;
+  _align-items: center;
+  _flex: 0 0 300px;
+  width: 330px;
+  height: 450px;
+  _scroll-snap-align: start;
+  _background-color: #ccc;
+  margin-bottom: 3rem;
+  border-radius: 1rem 1rem;
+}
