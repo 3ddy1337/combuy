@@ -241,7 +241,7 @@ main {
   scroll-snap-type: y mandatory;
   _box-shadow: 0 3px 10px 0 rgba(#000, 0.1);
   _-webkit-overflow-scrolling: touch;
-  _1scroll-padding: 1rem;
+  _scroll-padding: 1rem;
   _padding: 1rem;
   margin: auto;
   border-radius: 1rem 1rem;
